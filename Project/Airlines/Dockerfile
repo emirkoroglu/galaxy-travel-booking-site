@@ -1,7 +1,7 @@
 #
 # Build stage
 #
-FROM maven:3.6.0-jdk-11-slim AS build
+FROM maven:3.8.7-openjdk-18-slim AS build
 WORKDIR /build
 COPY pom.xml .
 COPY src ./src
@@ -11,7 +11,7 @@ RUN mvn clean package
 #
 # Package stage
 #
-FROM tomcat:8.5.72-jre11-openjdk-slim
+FROM tomcat:8.5.82-jre11-openjdk-slim
 COPY tomcat-users.xml /usr/local/tomcat/conf
 COPY --from=build /build/target/*.war /usr/local/tomcat/webapps/FlightBookingSystemSample.war
 EXPOSE 8080
