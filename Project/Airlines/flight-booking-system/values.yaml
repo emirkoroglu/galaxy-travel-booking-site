@@ -5,7 +5,7 @@ appName: flight-booking-system
 
 # The Docker image to use for the Java application.
 image:
-  repository: emirsway/galaxytravel:v1
+  repository: emirsway/galaxytravel:v1.3
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -15,8 +15,8 @@ replicaCount: 1
 autoscaling:
   enabled: false
   minReplicas: 1
-  maxReplicas: 5
-  targetCPUUtilizationPercentage: 80
+  maxReplicas: 3
+  targetCPUUtilizationPercentage: 85
 # The type of Kubernetes service to use for the Java application.
 
 service:
@@ -43,7 +43,7 @@ resources:
     cpu: 100m
     memory: 128Mi
 
-#helm create flight-booking-system
+#helm create galaxy-travel-booking-system
 #helm package . 
-#helm install flight-booking-system ./flight-booking-system-0.1.0.tgz
+#helm install flight-booking-system ./galaxy-travel-booking-system-0.3.tgz
 #helm uninstall chartname

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flightbookingsystemsample
-        image: emirsway/galaxytravel:v1
+        image: emirsway/galaxytravel:v1.3
         resources:
           requests:
             cpu: "1"
