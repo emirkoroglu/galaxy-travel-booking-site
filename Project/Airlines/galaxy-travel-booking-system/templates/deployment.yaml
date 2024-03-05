@@ -24,3 +24,15 @@ spec:
             memory: {{ .Values.resources.limits.memory }}
         ports:
         - containerPort: {{ .Values.service.port }}
+        readinessProbe:
+          httpGet:
+            path: /FlightBookingSystemSample/home.jsp
+            port: {{ .Values.service.port }}
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            path: /FlightBookingSystemSample/home.jsp
+            port: {{ .Values.service.port }}
+          initialDelaySeconds: 5
+          periodSeconds: 5
