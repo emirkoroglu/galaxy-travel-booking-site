@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "flight-booking-system.fullname" . }}
+  name: {{ include "galaxy-travel-booking-system.fullname" . }}
   labels:
-    {{- include "flight-booking-system.labels" . | nindent 4 }}
+    {{- include "galaxy-travel-booking-system.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "flight-booking-system.fullname" . }}
+    name: {{ include "galaxy-travel-booking-system.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:

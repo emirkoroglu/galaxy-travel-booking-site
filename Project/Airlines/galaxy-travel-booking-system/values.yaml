@@ -1,0 +1,47 @@
+# Default values for flight-booking-system.
+
+appName: flight-booking-system
+
+image:
+  repository: emirsway/galaxytravel
+  tag: v1.3
+  pullPolicy: IfNotPresent
+
+replicaCount: 1
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 80
+
+service:
+  name: flight-booking-system
+  type: LoadBalancer
+  port: 8080 # Changed from 8008 to 8080 to match your deployment
+
+serviceAccount:
+  create: true
+
+ingress:
+  enabled: false
+  annotations: {}
+  path: /
+  hosts:
+    - chart-example.local
+  tls: []
+
+resources:
+  limits:
+    cpu: "2" # Changed from 100m to 2 to match your deployment
+    memory: "2Gi" # Changed from 128Mi to 2Gi to match your deployment
+  requests:
+    cpu: "1" # Changed from 100m to 1 to match your deployment
+    memory: "1Gi" # Changed from 128Mi to 1Gi to match your deployment
+
+
+#helm create galaxy-travel-booking-system
+#helm package . 
+#helm install galaxy-travel-booking-system ./galaxy-travel-booking-system-0.0.1.tgz
+#helm uninstall galaxy-travel-booking-system
+#rm -rf galaxy-travel-booking-system-1.0.0.tgz 
