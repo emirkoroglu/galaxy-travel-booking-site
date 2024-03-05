@@ -45,3 +45,4 @@ resources:
 #helm install galaxy-travel-booking-system ./galaxy-travel-booking-system-0.0.2.tgz
 #helm uninstall galaxy-travel-booking-system
 #rm -rf galaxy-travel-booking-system-1.0.0.tgz 
+#http://localhost:8080/FlightBookingSystemSample/home.jsp
