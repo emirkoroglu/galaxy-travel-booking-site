@@ -4,7 +4,7 @@ appName: flight-booking-system
 
 image:
   repository: emirsway/galaxytravel
-  tag: v1.4
+  tag: v1.4.1
   pullPolicy: IfNotPresent
 
 replicaCount: 1
@@ -12,8 +12,8 @@ replicaCount: 1
 autoscaling:
   enabled: false
   minReplicas: 1
-  maxReplicas: 5
-  targetCPUUtilizationPercentage: 80
+  maxReplicas: 3
+  targetCPUUtilizationPercentage: 90
 
 service:
   name: flight-booking-system

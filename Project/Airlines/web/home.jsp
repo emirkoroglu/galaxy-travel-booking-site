@@ -67,7 +67,7 @@
 		<div class="carousel-item">
 			<img class="d-block img-fluid" src="./assets/img/milky.jpg" alt="Third slide">
 			<div class="carousel-caption d-md-block">
-				<h1>Awarded the best travel in the Galaxy</h1>
+				<h1>Best in the Milkway Galaxy</h1>
 			</div>
 		</div>
 	</div>
