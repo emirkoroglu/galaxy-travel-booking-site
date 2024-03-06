@@ -4,7 +4,7 @@ appName: flight-booking-system
 
 image:
   repository: emirsway/galaxytravel
-  tag: v1.3
+  tag: v1.4
   pullPolicy: IfNotPresent
 
 replicaCount: 1
